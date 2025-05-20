@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "osmanberke.github.io"
+  navbar:
+    right:
+      - about.qmd      
+      - icon: linkedin
+        href: https://twitter.com
+      - icon: github
+        href: https://github.com/
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+
+

@@ -1,0 +1,19 @@
+---
+title: "About Me"
+image: profile_blog.jpg
+about:
+  template: jolla
+  links:
+    - icon: google
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=ifqu0TMAAAAJ&hl=tr&oi=sra
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/osmanberke/
+    - icon: github
+      text: Github
+      href: https://github.com/osmanberke
+
+---
+
+Hello. I'm Osman Berke Guney, a PhD student in Electrical and Computer Engineering at Boston University.
