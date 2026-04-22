@@ -1,0 +1,253 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --blue: #1772d0;
+  --dark: #222;
+  --gray: #666;
+  --light-bg: #f7f7f7;
+  --border: #e4e4e4;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--dark);
+  background: #fff;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── NAV ── */
+nav {
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+}
+nav .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.nav-brand {
+  font-weight: 700;
+  font-size: 1em;
+  color: var(--dark);
+  text-decoration: none;
+}
+.nav-links { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; }
+.nav-links a { color: var(--gray); font-size: 0.93em; text-decoration: none; }
+.nav-links a:hover, .nav-links a.active { color: var(--blue); }
+
+/* ── PROFILE ── */
+.profile {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  padding: 52px 0 44px;
+}
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid var(--border);
+}
+.profile-content h1 {
+  margin: 0 0 4px;
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.profile-content .subtitle {
+  color: var(--gray);
+  margin: 0 0 16px;
+  font-size: 0.97em;
+}
+.profile-content .bio {
+  margin: 0 0 22px;
+  font-size: 0.97em;
+  max-width: 560px;
+}
+
+/* ── SOCIAL BUTTONS ── */
+.social-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 6px 14px;
+  font-size: 0.87em;
+  color: var(--dark);
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+  background: #fff;
+}
+.social-btn:hover { border-color: var(--blue); color: var(--blue); text-decoration: none; }
+.social-btn i, .social-btn .icon { font-size: 1em; }
+
+/* ── SECTION ── */
+section { padding: 8px 0 44px; }
+.section-title {
+  font-size: 1.2em;
+  font-weight: 700;
+  border-bottom: 2px solid var(--blue);
+  padding-bottom: 6px;
+  margin: 0 0 28px;
+  display: inline-block;
+}
+
+/* ── PAPER CARDS (highlighted) ── */
+.paper {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--border);
+}
+.paper:last-of-type { border-bottom: none; }
+.paper-thumb {
+  width: 196px;
+  flex-shrink: 0;
+}
+.paper-thumb img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  display: block;
+}
+.paper-thumb-placeholder {
+  width: 196px;
+  height: 138px;
+  background: var(--light-bg);
+  border-radius: 6px;
+  border: 1px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 0.78em;
+  text-align: center;
+  padding: 16px;
+}
+.paper-title {
+  font-size: 1.02em;
+  font-weight: 700;
+  color: var(--blue);
+  line-height: 1.4;
+  display: block;
+  margin-bottom: 6px;
+}
+.paper-authors {
+  font-size: 0.92em;
+  color: var(--gray);
+  margin-bottom: 4px;
+}
+.paper-venue {
+  font-size: 0.9em;
+  color: var(--gray);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.paper-abstract {
+  font-size: 0.9em;
+  color: #444;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+.paper-links { font-size: 0.9em; }
+.paper-links a { color: var(--blue); }
+.paper-links .sep { color: #bbb; margin: 0 5px; }
+.see-all { font-size: 0.95em; margin-top: 4px; }
+
+/* ── FULL PUBLICATION LIST ── */
+.pub-year-group { margin-bottom: 32px; }
+.pub-year {
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--gray);
+  border-left: 3px solid var(--blue);
+  padding-left: 10px;
+  margin-bottom: 14px;
+}
+.pub-item {
+  margin-bottom: 16px;
+  padding-left: 13px;
+  font-size: 0.94em;
+  line-height: 1.6;
+}
+.pub-title { font-weight: 600; color: var(--dark); }
+.pub-authors { color: var(--gray); margin: 2px 0; }
+.pub-venue { font-style: italic; color: var(--gray); }
+.pub-badges { margin-top: 5px; }
+.badge {
+  display: inline-block;
+  font-size: 0.76em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 4px;
+  font-style: normal;
+  font-weight: 500;
+}
+.badge-blue { background: #deeafb; color: #1558b0; }
+.badge-green { background: #e2f4e8; color: #1a7340; }
+.badge-gray { background: #efefef; color: #555; }
+
+/* ── BLOG ── */
+.blog-list { list-style: none; padding: 0; margin: 0; }
+.blog-item {
+  border-bottom: 1px solid var(--border);
+  padding: 18px 0;
+}
+.blog-item:first-child { padding-top: 0; }
+.blog-date { font-size: 0.83em; color: var(--gray); margin-bottom: 4px; }
+.blog-item a { font-size: 1.05em; font-weight: 600; }
+.blog-excerpt { font-size: 0.92em; color: #555; margin-top: 4px; }
+
+/* ── POST ── */
+.post-header { padding: 36px 0 24px; border-bottom: 1px solid var(--border); margin-bottom: 28px; }
+.post-header h1 { margin: 0 0 8px; font-size: 1.8em; }
+.post-meta { font-size: 0.87em; color: var(--gray); }
+.post-body { font-size: 0.97em; line-height: 1.75; }
+.post-body h2 { margin-top: 2em; }
+.post-body pre { background: var(--light-bg); padding: 16px; border-radius: 6px; overflow-x: auto; }
+.post-body code { font-size: 0.9em; }
+.post-body blockquote { border-left: 3px solid var(--blue); margin-left: 0; padding-left: 16px; color: var(--gray); }
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 24px;
+  text-align: center;
+  color: #999;
+  font-size: 0.83em;
+  margin-top: 20px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .profile { flex-direction: column; align-items: center; text-align: center; gap: 24px; }
+  .profile-photo { width: 140px; height: 140px; }
+  .social-links { justify-content: center; }
+  .bio { text-align: left; }
+  .paper { flex-direction: column; }
+  .paper-thumb, .paper-thumb-placeholder { width: 100%; }
+  .paper-thumb-placeholder { height: 180px; }
+}

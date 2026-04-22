@@ -1,80 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Osman Berke - Personal Website</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        header {
-            text-align: center;
-            padding: 50px 0;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-        .subtitle {
-            font-size: 1.2em;
-            color: #7f8c8d;
-            margin-bottom: 20px;
-        }
-        .content {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .social-links {
-            margin-top: 20px;
-        }
-        .social-links a {
-            color: #2c3e50;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-        .social-links a:hover {
-            color: #3498db;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Osman Berke</h1>
-        <p class="subtitle">Welcome to my personal website</p>
-        <div class="social-links">
-            <a href="https://github.com/osmanberke" target="_blank">GitHub</a>
-            <!-- Add more social links as needed -->
-        </div>
-    </header>
+---
+layout: default
+title: Home
+---
 
-    <main class="content">
-        <h2>About Me</h2>
-        <p>Hello! I'm Osman Berke. This is my personal website where I share my projects and thoughts.</p>
-        
-        <h2>Projects</h2>
-        <p>Check out my GitHub profile to see what I'm working on!</p>
-        
-        <!-- Add more sections as needed -->
-    </main>
-</body>
-</html> 
+<!-- PROFILE -->
+<div class="profile">
+  <img src="{{ '/profile.jpg' | relative_url }}" alt="Osman Berke Guney" class="profile-photo">
+  <div class="profile-content">
+    <h1>Osman Berke Guney</h1>
+    <p class="subtitle">PhD Candidate &middot; Electrical &amp; Computer Engineering &middot; Boston University</p>
+    <p class="bio">
+      PhD candidate at Boston University under the supervision of
+      <a href="https://www.kolachalama.com/" target="_blank" rel="noopener">Dr. Vijaya Kolachalama</a>.
+      My research interests broadly focus on medical AI, with a specific emphasis on
+      active feature acquisition.
+    </p>
+    <div class="social-links">
+      <a href="https://github.com/osmanberke" class="social-btn" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://scholar.google.com/citations?user=ifqu0TMAAAAJ&hl=en" class="social-btn" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i> Google Scholar
+      </a>
+      <a href="https://www.linkedin.com/in/osmanberke/" class="social-btn" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <!-- Uncomment and fill in if you have these accounts:
+      <a href="https://huggingface.co/YOUR_HANDLE" class="social-btn" target="_blank" rel="noopener">
+        🤗 HuggingFace
+      </a>
+      <a href="https://x.com/YOUR_HANDLE" class="social-btn" target="_blank" rel="noopener">
+        <i class="fab fa-x-twitter"></i> Twitter / X
+      </a> -->
+    </div>
+  </div>
+</div>
+
+<!-- SELECTED PUBLICATIONS -->
+<section>
+  <h2 class="section-title">Selected Publications</h2>
+
+  <!-- Paper 1: Nature Medicine 2024 -->
+  <div class="paper">
+    <div class="paper-thumb">
+      <!-- To add a paper thumbnail: save the image to assets/img/paper-dementia.png
+           then replace the div below with:
+           <img src="{{ '/assets/img/paper-dementia.png' | relative_url }}" alt="Dementia diagnosis"> -->
+      <div class="paper-thumb-placeholder">Add paper figure</div>
+    </div>
+    <div class="paper-body">
+      <a class="paper-title" href="#" target="_blank" rel="noopener">
+        AI-based differential diagnosis of dementia etiologies on multimodal data
+      </a>
+      <div class="paper-authors">
+        C Xue, SS Kowshik, D Lteif, S Puducheri, VH Jasodanand, OT Zhou,
+        <strong>OB Guney</strong>, et al.
+      </div>
+      <div class="paper-venue"><em>Nature Medicine</em>, 2024</div>
+      <div class="paper-abstract">
+        A multimodal deep learning framework that differentially diagnoses six dementia
+        etiologies—including Alzheimer's disease and frontotemporal dementia—from clinical
+        notes, neuroimaging, and biomarkers. The model achieves expert-level accuracy while
+        providing interpretable, clinician-aligned predictions.
+      </div>
+      <div class="paper-links">
+        <a href="#">pdf</a><span class="sep">/</span>
+        <a href="#">code</a><span class="sep">/</span>
+        <a href="#">bib</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paper 2: ICML 2025 -->
+  <div class="paper">
+    <div class="paper-thumb">
+      <!-- <img src="{{ '/assets/img/paper-afa.png' | relative_url }}" alt="Active feature acquisition"> -->
+      <div class="paper-thumb-placeholder">Add paper figure</div>
+    </div>
+    <div class="paper-body">
+      <a class="paper-title" href="#" target="_blank" rel="noopener">
+        Interpretability-driven active feature acquisition in learning systems
+      </a>
+      <div class="paper-authors">
+        <strong>OB Guney</strong>, KS Saichandran, K Elzokm, Z Zhang, VB Kolachalama
+      </div>
+      <div class="paper-venue"><em>International Conference on Machine Learning (ICML)</em>, 2025</div>
+      <div class="paper-abstract">
+        An active feature acquisition framework that uses explainability-based feature
+        ranking to selectively query informative features at test time, reducing acquisition
+        cost while preserving predictive performance—with applications to neurocognitive
+        disorder recommendation systems.
+      </div>
+      <div class="paper-links">
+        <a href="#">pdf</a><span class="sep">/</span>
+        <a href="#">code</a><span class="sep">/</span>
+        <a href="#">bib</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paper 3: IEEE TBME 2021 -->
+  <div class="paper">
+    <div class="paper-thumb">
+      <!-- <img src="{{ '/assets/img/paper-ssvep.png' | relative_url }}" alt="SSVEP BCI"> -->
+      <div class="paper-thumb-placeholder">Add paper figure</div>
+    </div>
+    <div class="paper-body">
+      <a class="paper-title" href="#" target="_blank" rel="noopener">
+        A deep neural network for SSVEP-based brain-computer interfaces
+      </a>
+      <div class="paper-authors">
+        <strong>OB Guney</strong>, M Oblokulov, H Ozkan
+      </div>
+      <div class="paper-venue"><em>IEEE Transactions on Biomedical Engineering</em>, 2021</div>
+      <div class="paper-abstract">
+        A convolutional neural network tailored for steady-state visually evoked potential
+        (SSVEP) recognition in BCI spellers. The network learns discriminative spectral-spatial
+        features from raw EEG signals, achieving state-of-the-art accuracy across multiple
+        subjects and datasets.
+      </div>
+      <div class="paper-links">
+        <a href="#">pdf</a><span class="sep">/</span>
+        <a href="#">code</a><span class="sep">/</span>
+        <a href="#">bib</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="see-all"><a href="{{ '/publications.html' | relative_url }}">→ Full publication list</a></p>
+</section>

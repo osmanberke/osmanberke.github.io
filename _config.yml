@@ -1,0 +1,26 @@
+title: Osman Berke Guney
+description: PhD Candidate in ECE at Boston University
+url: "https://osmanberke.github.io"
+baseurl: ""
+
+author:
+  name: Osman Berke Guney
+  github: osmanberke
+  linkedin: osmanberke
+  scholar: ifqu0TMAAAAJ
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+permalink: /blog/:year/:month/:day/:title/
+
+exclude:
+  - _quarto.yml
+  - "*.qmd"
+  - docs/
+  - posts/
+  - Gemfile.lock
+  - node_modules/
+  - preview.html
